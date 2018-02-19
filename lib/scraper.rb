@@ -28,7 +28,7 @@ class Scraper
           media_links[:twitter] = i.attributes["href"].value
           binding.pry
 
-      end
+    
     end
       # twitter = link.css("a")[0].values[0]
       # linkedin = link.css("a")[1].values[0]
