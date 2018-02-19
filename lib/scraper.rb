@@ -29,9 +29,10 @@ class Scraper
       linkedin = link.css("a")[1].values[0]
       github = link.css("a")[2].values[0]
       blog = link.css("a")[3].values[0]
-      media_links = {:twitter => twitter, :linkedin => linkedin, :github => github, :blog => blog}
+      binding.pry
+
+      media_links = {:bio => bio :twitter => twitter, :linkedin => linkedin, :github => github, :blog => blog}
     end
-    #binding.pry
     media_links
   end
 
