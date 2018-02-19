@@ -31,7 +31,7 @@ class Scraper
       blog = link.css("a")[3].values[0]
       bio = doc.css("div.description-holder p").text
       profile_quote = doc.css("div.description-holder").text
-      binding.pry
+      #binding.pry
       media_links = {:bio => bio, :twitter => twitter, :linkedin => linkedin, :github => github, :blog => blog}
     end
     media_links
