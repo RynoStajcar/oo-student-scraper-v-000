@@ -22,9 +22,10 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML(open(profile_url))
     media_links = {}
+    binding.pry
     doc.css("div.social-icon-container").each do |link|
-      binding.pry
-      twitter = link.css("a")[0].values[0]
+      if link.css("a")[0].values[0].inlcude?("twitter")
+        twitter = link.css("a")[0].values[0]
       linkedin = link.css("a")[1].values[0]
       github = link.css("a")[2].values[0]
       blog = link.css("a")[3].values[0]
