@@ -27,7 +27,6 @@ class Scraper
         if i.include?("twitter")
           binding.pry
           media_links[:twitter] = i.attributes["href"].value
-        elsif
       end
     end
       # twitter = link.css("a")[0].values[0]
