@@ -30,8 +30,8 @@ class Scraper
       blog = nil
       links << link.css("a").map do |i|
         i.attributes["href"].value
-        
       end
+      binding.pry
       # twitter = link.css("a")[0].values[0]
       # linkedin = link.css("a")[1].values[0]
       # github = link.css("a")[2].values[0]
