@@ -24,10 +24,11 @@ class Scraper
     media_links = {}
     doc.css("div.social-icon-container").each do |link|
       link.css("a").each do |i|
-        if i.attributes["href"].value
-        binding.pry
+        if i.attributes["href"].value.include?("twitter")
+          media_links[:twitter] = i.attributes["href"].value
       end
-      end
+    end
+    binding.pry
       # twitter = link.css("a")[0].values[0]
       # linkedin = link.css("a")[1].values[0]
       # github = link.css("a")[2].values[0]
