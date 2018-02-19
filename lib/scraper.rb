@@ -26,7 +26,8 @@ class Scraper
       link.css("a").each do |i|
         if i.attributes["href"].include?("twitter")
           media_links[:twitter] = i.attributes["href"].value
-        
+          binding.pry
+
       end
     end
       # twitter = link.css("a")[0].values[0]
@@ -37,7 +38,6 @@ class Scraper
       # profile_quote = doc.css("div.profile-quote").text
       # media_links = {:bio => bio, :profile_quote => profile_quote, :twitter => twitter, :linkedin => linkedin, :github => github, :blog => blog}
     end
-    binding.pry
     media_links
   end
 
